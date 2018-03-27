@@ -15,7 +15,8 @@ counter ++;
 
 
 function SomeFun(){
-    counter= counter +1; // throw some exception..like not defined
+    var counter= 0;
+    counter= counter +1;
 
 }
 SomeFun();
