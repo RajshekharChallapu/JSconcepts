@@ -2,17 +2,23 @@
 
 //It is a function that executes automatically when we create it
 
-//Initialization starts
+//Initialization starts and only once
 
-var counter =10;  //global variable
+
+(function(){    // anonymous function.. invokes immediately
+
+var counter =10;   //not accessble to other function
 counter ++;
+
+})();  //invoking immediately
 //ends here
 
+
 function SomeFun(){
-    counter= counter +1; //someFun
+    counter= counter +1; // throw some exception..like not defined
 
 }
-SomeFun();   //invoking
+SomeFun();
 
 
 
