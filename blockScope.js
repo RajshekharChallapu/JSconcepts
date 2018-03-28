@@ -1,17 +1,14 @@
-//In JavaScript, a block is one or more statements within curly brackets. Conditional expressions, such as if, for, and while statements, all use blocks to execute statements based on certain conditions.
+//Using let...Even when using ES2015, the var statement does not create block scope. In order to create block scope, we need to use either the let or const statements inside a block. We’ll come back to const shortly. For now, let’s focus on let.
+
 
 
 function fn() {
-  var x = 'function scope';
+  var variable1 = 'function scope';
 
   if (true) {
-    var y = 'not block scope';
+    let variable2 = 'block scope';
   }
 
-  function innerFn() {
-    console.log(x, y); // function scope not block scope
-  }
-  innerFn();
+  console.log(variable1, variable2); // Uncaught ReferenceError: variable2 is not defined
 }
-
-//The var statement is not able to create a block scope, even when used within a block, so the console.log statement is able to access both the x and y variables. The fn function creates a function scope and both the x and y variables are accessible via the scope chain within that scope.
+fn();
