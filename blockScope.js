@@ -12,3 +12,5 @@ function fn() {
   console.log(variable1, variable2); // Uncaught ReferenceError: variable2 is not defined
 }
 fn();
+
+//Block scopes work the same as function scopes work, but they are created for blocks, rather than functions
