@@ -3,7 +3,7 @@
 function Outer(){//global function
 
     var variable1;
-//this funciton can access above function variables..as it is nested inside that func
+//below inner funciton can access above function variables..as it is nested inside that func
     function innner(){// nested function
         var variable2;
     }
