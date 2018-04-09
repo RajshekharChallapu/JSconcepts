@@ -21,4 +21,6 @@ let calc = function(num1, num2, callback){
 };
 
 
-console.log(calc(4,6, 'doWhatever'));//calling add function
+console.log(calc(4,6, function(a,b){//annonymous function
+    return a-b;// we can use anonymous functions to call...we don't have to define function like above..add,multiply and doWhatever
+}));//calling add function
