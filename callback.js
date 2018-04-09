@@ -12,7 +12,7 @@ var myArr = [{
             }];
 //sorting by array str(string)
 myArr.sort(function(val1, val2){
-    if(val1.str < val2.str){
+    if(val1.num < val2.num){
         return -1;
 
     }else{
