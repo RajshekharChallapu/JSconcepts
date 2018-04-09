@@ -1,14 +1,24 @@
+let add = function(a, b){
+    return a+b;
+}
+let multiply = function(a, b){
+    return a*b;
+}
+let doWhatever = function(a,b){
+    console.log('here are your two numbers back ${a} , ${b}');
+}
 
-//A callback function, also known as a higher-order function, is a function that is passed to another function (let’s call this other function “otherFunction”) as a parameter, and the callback function is called (or executed) inside the otherFunction. A callback function is essentially a pattern (an established solution to a common problem), and therefore, the use of a callback function is also known as a callback pattern.
+let calc = function(num1, num2, callback){
+   /*
+    if(calcType === "add"){
 
-let x = function(){
-    console.log("I am called from inside a function")
+        return num1 + num2;
+    } else if(calcType === "multiply"){
+        return num1* num2;
+    }*/
+
+    return callback(num1,num2);
 };
 
-let y = function(callback){
-    console.log('do somthing');
-    callback();
-}
-y(x);
 
-
+console.log(calc(4,6, 'doWhatever'));//calling add function
