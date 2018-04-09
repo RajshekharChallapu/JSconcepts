@@ -9,15 +9,10 @@ let doWhatever = function(a,b){
 }
 
 let calc = function(num1, num2, callback){
-   /*
-    if(calcType === "add"){
-
-        return num1 + num2;
-    } else if(calcType === "multiply"){
-        return num1* num2;
-    }*/
+    if(typeof callback === "fucniton"){// checking type for error
 
     return callback(num1,num2);
+    }
 };
 
 
