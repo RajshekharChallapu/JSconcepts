@@ -1,21 +1,23 @@
-let add = function(a, b){
-    return a+b;
-}
-let multiply = function(a, b){
-    return a*b;
-}
-let doWhatever = function(a,b){
-    console.log('here are your two numbers back ${a} , ${b}');
-}
+var myArr = [{
 
-let calc = function(num1, num2, callback){
-    if(typeof callback === "fucniton"){// checking type for error
+        num: 5,
+        str: 'apple'
+},
+    {
+        num: 8,
+        str: 'cabbage'
+}, {
+        num: 1,
+        str: 'mango'
+            }];
+//sorting by array str(string)
+myArr.sort(function(val1, val2){
+    if(val1.str < val2.str){
+        return -1;
 
-    return callback(num1,num2);
+    }else{
+        return 1;
     }
-};
+});
 
-
-console.log(calc(4,6, function(a,b){//annonymous function
-    return a-b;// we can use anonymous functions to call...we don't have to define function like above..add,multiply and doWhatever
-}));//calling add function
+console.log(myArr);
