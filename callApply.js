@@ -1,16 +1,17 @@
-//ex: Obj1 and Obj 2 can have separate methods by following functions args..where call, apply, and bind methods
+//call() and apply() serve the exact same purpose. The only difference between how they work is that call() expects all parameters to be passed in individually, whereas apply() expects an array of all of our parameters.
 
-//building object
-var obj={num:2}; // property num
-//method
-var addToThis = function(a, b,c){
-    return this.num+a+b+c;
+var pokemon = {
+    firstname: 'Pika',
+    lastname: 'Chu ',
+    getPokeName: function() {
+        var fullname = this.firstname + ' ' + this.lastname;
+        return fullname;
+    }
 };
 
-//console.log(addToThis.call(obj, 4,5,6));//functionname.call(obj, function arguments)//first argumrnt would be obj
+var pokemonName = function(snack, hobby) {
+    console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
+};
 
-//apply
-var arr = [1,2,3]
-comsole.log(addToThis.apply(obj,arr));
-
-
+pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
+pokemonName.apply(pokemon,['sushi', 'algorithms']); // Pika Chu  loves sushi and algorithms
