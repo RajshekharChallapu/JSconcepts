@@ -6,12 +6,12 @@
 var obj={num:2}; // property num
 
 //method
-var addToThis = function(a){
+var addToThis = function(a, b,c){
 
-    return this.num+a;
+    return this.num+a+b+c;
 };
 
-console.log(addToThis.call(obj, 4));//functionname.call(obj, function arguments)//first argumrnt would be obj
+console.log(addToThis.call(obj, 4,5,6));//functionname.call(obj, function arguments)//first argumrnt would be obj
 
 
 
