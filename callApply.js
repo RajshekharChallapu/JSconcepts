@@ -13,5 +13,8 @@ var pokemonName = function(snack, hobby) {
     console.log(this.getPokeName() + ' loves ' + snack + ' and ' + hobby);
 };
 
+//Accepts additional parameters as well
+Executes the function it was called upon right away.
+The call() method does not make a copy of the function it is being called on.
 pokemonName.call(pokemon,'sushi', 'algorithms'); // Pika Chu  loves sushi and algorithms
 pokemonName.apply(pokemon,['sushi', 'algorithms']); // Pika Chu  loves sushi and algorithms
